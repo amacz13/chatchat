@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './routes/home-page/home-page.component';
 import { ConversationComponent } from './components/conversation/conversation.component';
 import { ConversationListComponent } from './components/conversation-list/conversation-list.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ConversationListComponent } from './components/conversation-list/conver
     NavigationBarComponent,
     HomePageComponent,
     ConversationComponent,
-    ConversationListComponent
+    ConversationListComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

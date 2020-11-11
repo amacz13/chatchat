@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chatchat-8e153": {
+      "hosting": {
+        "ChatChat": [
+          "chatchat-8e153"
+        ]
+      }
+    }
+  }
+}

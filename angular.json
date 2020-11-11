@@ -121,8 +121,16 @@
               "devServerTarget": "ChatChat:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "ChatChat"
+    }
+  },
+  "defaultProject": "ChatChat",
+  "cli": {
+    "analytics": "823b72dd-42a3-43f1-b87f-46a6f4e1d80c"
+  }
 }

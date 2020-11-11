@@ -1,0 +1,48 @@
+
+
+<div class="row" *ngIf="errorText.length > 0">
+  <div class="col-1"></div>
+  <div class="col-10">
+    <div class="alert alert-danger" role="alert">
+      {{errorText}}
+    </div>
+  </div>
+  <div class="col-1"></div>
+</div>
+
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Connexion</h5>
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" class="form-control" id="loginEmail" [(ngModel)]="loginEmail">
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" class="form-control" id="loginPassword" [(ngModel)]="loginPassword">
+        </div>
+        <button class="btn btn-primary" (click)="doLogin()" [disabled]="loginEmail.length <= 0 || loginPassword.length <= 0">Se connecter</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Inscription</h5>
+        <div class="form-group">
+          <label for="registerEmail">Email</label>
+          <input type="email" class="form-control" id="registerEmail" [(ngModel)]="registerEmail">
+        </div>
+        <div class="form-group">
+          <label for="registerPassword">Password</label>
+          <input type="password" class="form-control" id="registerPassword" [(ngModel)]="registerPassword">
+        </div>
+        <button class="btn btn-primary" (click)="doRegister()" [disabled]="registerEmail.length <= 0 || registerPassword.length <= 0">S'inscrire</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-1"></div>
+</div>

@@ -17,5 +17,5 @@ export class FirebaseMessagingService {
   createConversation(conversation: Conversation) {
     this.firebaseDb.object('conversations/'+conversation.id).set(conversation).then( () => console.log("Created conversation")).catch( err => console.error(err));
   }
-  
+
 }

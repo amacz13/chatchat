@@ -12,6 +12,8 @@ import { ConversationListComponent } from './components/conversation-list/conver
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
+import { LoginScreenComponent } from './routes/login-screen/login-screen.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import {environment} from '../environments/environment';
     NavigationBarComponent,
     HomePageComponent,
     ConversationComponent,
-    ConversationListComponent
+    ConversationListComponent,
+    LoginScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import {environment} from '../environments/environment';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

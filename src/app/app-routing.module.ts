@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomePageComponent} from './routes/home-page/home-page.component';
+import {LoginScreenComponent} from './routes/login-screen/login-screen.component';
+import {AngularFireAuthGuard} from '@angular/fire/auth-guard';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePageComponent
+    component: LoginScreenComponent
+  },
+  {
+    path: 'home',
+    component: HomePageComponent,
+    canActivate: [AngularFireAuthGuard]
   }
 ];
 

@@ -10,6 +10,9 @@ import { HomePageComponent } from './routes/home-page/home-page.component';
 import { ConversationComponent } from './components/conversation/conversation.component';
 import { ConversationListComponent } from './components/conversation-list/conversation-list.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,10 +25,11 @@ import { SettingsComponent } from './components/settings/settings.component';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    FontAwesomeModule
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
